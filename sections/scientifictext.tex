@@ -1,44 +1,40 @@
-\section*{Segmentation of Overlapping Macrophages}
-% 
+  \section*{Segmentation of Overlapping Macrophages}
+%
 Cell migration is important in many biological processes, one of them
-being the immune system, a network of cells that work together to protect the 
-body. Macrophages, a type of white blood cell, settle in lymphoid tissues and 
-the liver, thus trapping foreign particles\cite{Martinez2008}. 
-An unbalanced migratory result from these cells results in human disease, 
-like cancer or autoimmune. Study of migration of the aforementioned cells 
-becomes relevant because cell migration is essential for the 
-homeostasis in adults\cite{pocha2014}. 
-Life scientists have used model organisms to understand human cell processes. 
-Such organism is the \emph{Drosophila melanogaster}, the common fruit fly, 
-which has shown to offer insights about how macrophages integrate the signals
-from the environment and other cells into migration\cite{wood2017}.\medskip\\
-% 
-The research project involves developing computer algorithms to analyse the 
-movement of macrophages taken from the model organism 
-\emph{Drosophila melanogaster}, which were genetically modified to fluoresce 
-when looked under a microscope\cite{Stramer2010}. While the process of acquiring 
-these sequences of images containing macrophages has a lot of work behind it, 
-the images still suffer from artefacts and noise which makes it hard to 
-make out the cells from the background, even for the human eye. 
+being the immune system, a network of cells that work together to protect the
+body. Macrophages, a type of white blood cell, settle in lymphoid tissues and
+the liver, thus trapping foreign particles\cite{Martinez2008}.
+Study of migration of the aforementioned cells
+becomes relevant because cell migration is essential for the
+homeostasis in adults\cite{pocha2014}, where
+an unbalanced migratory response from these cells results in human disease,
+like cancer or autoimmune.
+Life scientists have used model organisms to understand human cell processes.
+The model organism \emph{Drosophila melanogaster}, the common fruit fly,
+has shown insights about how macrophages integrate the signals
+from the environment and other cells into migration\cite{wood2017}.
+The organisms have been genetically modified to fluoresce
+when looked under a microscope\cite{Stramer2010}\medskip\\
+%
+This talk will involve the developing of computer algorithms to analyse the
+movement of macrophages taken from the model organism
+\emph{Drosophila melanogaster}. While a lot of development
+has gone into acquiring sequences of images containing macrophages,
+the images still suffer from artefacts and noise which makes it hard to
+make out the cells from the background, even for the human eye.
 Moreover, the interactions between the cells -which are crucial for scientists
-to analyse- cause traditional algorithms\cite{Henry2013,lu2015,Caselles} 
+to analyse- cause traditional algorithms\cite{Henry2013,lu2015,Caselles}
 to fail to distinguish one cell from
-another, only detecting the cluster of cells as one single entity, which is 
-called \emph{clump} in some literature\cite{lu2015}. The presence of clumps
-creates the need for an algorithm capable to tell the cells apart, even when 
+another, only detecting the cluster of cells as one single entity, referred to
+as \emph{clump}. The presence of clumps
+creates the need for an algorithm capable to tell the cells apart, even when
 they overlap.\medskip\\
-% 
-Preliminary results in the study of movement of migrating macrophages involve the 
-analysis of a single frame, where some cells overlap and other cells are 
-isolated from the clusters, or \emph{clumps} of cells. When detecting a clump, 
-an algorithm estimates the position of the intersection between two or more
-overlapping cells. These points improve on other corner-finding algorithms, like 
-Harris'\cite{Harris1988}. From the intersection points, an analysis was made of 
-the boundaries adjacent to these points and the portion of the cell hidden 
-from segmentation due to overlapping was found in a large number of cases. The 
-algorithm to find intersection points was proven to work with a variety of 
-synthetic data, and has proven consistent with clumps in real macrophages 
-images. Although the methods of finding the overlapped portions of the 
-cells are still in development. However, current experimental results 
-demonstrate the promise of this approach 
-to produce correct segmentations of overlapping cells.
+%
+Results of overlapping macrophages in a single frame will be
+presented, where some cells overlap and other cells are
+isolated from the \emph{clumps} of cells. When detecting a clump,
+an algorithm estimates the position of the \emph{junctions} or intersections
+between two or more overlapping cells. From these points, two techniques
+to disambiguate the overlapped section of the cells will be discussed.
+Finally, preliminary results of the incorporation of temporal components
+into the segmentation will be presented. 
